@@ -1,4 +1,11 @@
-<h1>Cocktails#index</h1>
+ <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'cocktails.jpg', alt: 'Cocktails' %>);">
+  <div class="container">
+    <h1><strong>Cocktails in the sky</strong></h1>
+    <p>tast best cocktails in the world</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
 
  <% @cocktails.each do |cocktail| %>
       <tr>
@@ -6,3 +13,4 @@
     <% end %>
 
 <%= link_to 'New Cocktail', new_cocktail_path %>
+
