@@ -1,16 +1,22 @@
- <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'cocktails.jpg', alt: 'Cocktails' %>);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'cocktails.jpg', alt: 'Cocktails' %>);">
   <div class="container">
     <h1><strong>Cocktails in the sky</strong></h1>
     <p>tast best cocktails in the world</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
   </div>
 </div>
 
 
- <% @cocktails.each do |cocktail| %>
-      <tr>
-        <td><%= link_to cocktail.name, cocktail_path(cocktail) %></td>
+  <div class="card">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <a href><%= link_to cocktail.name, cocktail_path(cocktail) %></a href>
+      </div>
     <% end %>
+  </div>
 
-<%= link_to 'New Cocktail', new_cocktail_path %>
+  <div class="banner_2" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path 'new_cocktail.jpg', alt: 'New Cocktails' %>);">
+    <div class="container ">
+        <p><%= link_to 'New Cocktail', new_cocktail_path %></p>
+    </div>
+  </div>
 
